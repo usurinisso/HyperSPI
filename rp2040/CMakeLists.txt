@@ -7,19 +7,21 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(BOOT_WORKAROUND ON)
 
 # Default output data pin for the non-SPI LED strips (only for sk6812/ws2812b)
-set(OUTPUT_DATA_PIN 14)
+set(OUTPUT_DATA_PIN 16)
+
+set(SECOND_SEGMENT_DATA_PIN=17)
 
 # Use multi-segment, starting index of second led strip or OFF to disable
-set(SECOND_SEGMENT_INDEX OFF)
+set(SECOND_SEGMENT_INDEX 230)
 
 # If multi-segment is used and it's reversed, set this option to ON to enable reversing
-set(SECOND_SEGMENT_REVERSED OFF)
+set(SECOND_SEGMENT_REVERSED ON)
 
 # HyperSPI communication interface with Raspberry Pi
-set(OUTPUT_SPI_DATA_PIN 4)
-set(OUTPUT_SPI_CLOCK_PIN 2)
-set(OUTPUT_SPI_CHIP_SELECT 5)
-set(OUTPUT_SPI_INTERFACE spi0)
+set(OUTPUT_SPI_DATA_PIN 28)
+set(OUTPUT_SPI_CLOCK_PIN 26)
+set(OUTPUT_SPI_CHIP_SELECT 29)
+set(OUTPUT_SPI_INTERFACE spi1)
 
 # User configuration section ends here
 # Usually you don't need to change anything below this section
